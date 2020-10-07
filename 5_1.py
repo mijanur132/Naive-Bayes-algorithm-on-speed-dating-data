@@ -30,6 +30,7 @@ def nbc(t_frac,Ac):
     trainSet = pd.read_csv("trainingSet.csv").sample(random_state = 47, frac = t_frac)
     trainSet.reset_index(drop = True, inplace = True)
     testSet = pd.read_csv("testSet.csv")
+
     total_y_0 = len(trainSet[trainSet["decision"] == 0])
     total_y_1 = len(trainSet[trainSet["decision"] == 1])
     train_set_size=len(trainSet)
